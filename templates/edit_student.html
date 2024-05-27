@@ -1,0 +1,48 @@
+<!-- edit_student.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Student</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Edit Student</h2>
+        <form method="post">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" name="name" value="{{ student.name }}" required>
+            </div>
+            <div class="form-group">
+                <label for="grade">Grade</label>
+                <input type="text" class="form-control" id="grade" name="grade" value="{{ student.grade }}" required>
+            </div>
+            <div class="form-group">
+                <label for="maths">Maths</label>
+                <input type="number" class="form-control" id="maths" name="maths" value="{{ student.maths }}" required>
+            </div>
+            <div class="form-group">
+                <label for="science">Science</label>
+                <input type="number" class="form-control" id="science" name="science" value="{{ student.science }}" required>
+            </div>
+            <div class="form-group">
+                <label for="english">English</label>
+                <input type="number" class="form-control" id="english" name="english" value="{{ student.english }}" required>
+            </div>
+            <div class="form-group">
+                <label for="hindi">Hindi</label>
+                <input type="number" class="form-control" id="hindi" name="hindi" value="{{ student.hindi }}" required>
+            </div>
+            <div class="form-group">
+                <label for="computer">Computer</label>
+                <input type="number" class="form-control" id="computer" name="computer" value="{{ student.computer }}" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+        </form>
+    </div>
+</body>
+</html>

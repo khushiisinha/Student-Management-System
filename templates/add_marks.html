@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Marks</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Add Marks</h2>
+        <form method="post" action="/add_marks">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Enter name" required>
+            </div>
+            <div class="form-group">
+                <label for="maths">Maths</label>
+                <input type="number" class="form-control" id="maths" name="maths" required>
+            </div>
+            <div class="form-group">
+                <label for="science">Science</label>
+                <input type="number" class="form-control" id="science" name="science" required>
+            </div>
+            <div class="form-group">
+                <label for="english">English</label>
+                <input type="number" class="form-control" id="english" name="english" required>
+            </div>
+            <div class="form-group">
+                <label for="hindi">Hindi</label>
+                <input type="number" class="form-control" id="hindi" name="hindi" required>
+            </div>
+            <div class="form-group">
+                <label for="computer">Computer</label>
+                <input type="number" class="form-control" id="computer" name="computer" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Marks</button>
+        </form>
+        <br>
+        <a href="/dashboard" class="btn btn-secondary">Back to Dashboard</a>
+    </div>
+</body>
+</html>

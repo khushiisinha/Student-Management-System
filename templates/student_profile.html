@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .header {
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .profile-container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .profile-heading {
+            color: #007bff;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .profile-section {
+            margin-bottom: 30px;
+        }
+        .section-title {
+            color: #007bff;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .profile-details p {
+            margin-bottom: 5px;
+        }
+        .btn-back {
+            background-color: #dc3545;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+        .btn-back:hover {
+            background-color: #c82333;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <h1>Student Profile</h1>
+    </div>
+    <!-- End Header Section -->
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="profile-container">
+            <!-- Student Name and Contact Details Section -->
+            <div class="profile-section">
+                <h2 class="section-title">Name and Contact Details</h2>
+                <div class="profile-details">
+                    <p><strong>Name:</strong> {{ student.name }}</p>
+                    <!-- Display contact details -->
+                    <p><strong>Email:</strong> {{ student.email }}</p>
+                    <p><strong>Phone:</strong> {{ student.phone }}</p>
+                </div>
+            </div>
+            <!-- End Student Name and Contact Details Section -->
+
+            <!-- Marks Section -->
+            <div class="profile-section">
+                <h2 class="section-title">Marks</h2>
+                <div class="profile-details">
+                    <p><strong>Maths:</strong> {{ student.maths }}</p>
+                    <p><strong>Science:</strong> {{ student.science }}</p>
+                    <p><strong>English:</strong> {{ student.english }}</p>
+                    <p><strong>Hindi:</strong> {{ student.hindi }}</p>
+                    <p><strong>Computer:</strong> {{ student.computer }}</p>
+                </div>
+            </div>
+            <!-- End Marks Section -->
+
+            <!-- Grade Section -->
+            <div class="profile-section">
+                <h2 class="section-title">Grade</h2>
+                <div class="profile-details">
+                    <p><strong>Grade:</strong> {{ student.grade }}</p>
+                </div>
+            </div>
+            <!-- End Grade Section -->
+
+            <!-- Back Button -->
+            <a href="{{ url_for('dashboard') }}" class="btn btn-back">Back to Dashboard</a>
+        </div>
+    </div>
+    <!-- End Main Content -->
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Students</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2>View Students</h2>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Maths</th>
+                    <th scope="col">Science</th>
+                    <th scope="col">English</th>
+                    <th scope="col">Hindi</th>
+                    <th scope="col">Computer</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for student in students %}
+                    <tr>
+                        <th scope="row">{{ student.id }}</th>
+                        <td>{{ student.name }}</td>
+                        <td>{{ student.maths }}</td>
+                        <td>{{ student.science }}</td>
+                        <td>{{ student.english }}</td>
+                        <td>{{ student.hindi }}</td>
+                        <td>{{ student.computer }}</td>
+                        <td>
+                            <a href="/view_student/{{ student.id }}" class="btn btn-primary">View Details</a>
+                            <a href="/generate_marksheet/{{ student.id }}" class="btn btn-success">Generate Marksheet</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="/dashboard" class="btn btn-secondary">Back to Dashboard</a>
+    </div>
+</body>
+</html>

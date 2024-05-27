@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marksheet</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #343a40;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding-top: 50px;
+        }
+        .marksheet {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-bottom: 20px;
+        }
+        h2, h3 {
+            color: #007bff;
+            text-align: center;
+        }
+        .subject {
+            margin-bottom: 20px;
+        }
+        .subject p {
+            margin: 5px 0;
+        }
+        .total-marks {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .percentage {
+            color: #28a745;
+        }
+        .print-button {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .btn-print {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .btn-print:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="marksheet">
+            <h2><u>Marksheet</u></h2>
+            <div class="student-info">
+                <h3>Name - {{ student.name }} <br><br> <span style="color:red;">Grade:</span> <span style="color: red;">{{ student.grade }}</span></h3>
+            </div>
+            <div class="subject">
+                <p>Maths: {{ student.maths }}</p>
+                <p>Science: {{ student.science }}</p>
+                <p>English: {{ student.english }}</p>
+                <p>Hindi: {{ student.hindi }}</p>
+                <p>Computer: {{ student.computer }}</p>
+            </div>
+            <div class="total-marks">
+                <p>Total Marks: {{ student.maths + student.science + student.english + student.hindi + student.computer }}</p>
+                <p class="percentage">Percentage: {{ ((student.maths + student.science + student.english + student.hindi + student.computer) / 500) * 100 }}%</p>
+            </div>
+        </div>
+        <div class="print-button">
+            <button class="btn btn-print" onclick="window.print()">Print Marksheet</button>
+        </div>
+    </div>
+</body>
+</html>
